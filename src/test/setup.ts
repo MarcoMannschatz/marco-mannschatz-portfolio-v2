@@ -12,4 +12,4 @@ class MockIntersectionObserver implements IntersectionObserver {
   }
 }
 
-globalThis.IntersectionObserver = MockIntersectionObserver as any;
+globalThis.IntersectionObserver = MockIntersectionObserver;

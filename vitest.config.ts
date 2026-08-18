@@ -4,7 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()] as any,
+  // @ts-expect-error vitest bundles its own Vite plugin types, which disagree structurally with the installed Vite's plugin types at this version combination; safe at runtime.
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
