@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
@@ -6,6 +7,7 @@ import { content, CV_PDF_URL, PROFILE_IMAGE } from "@/lib/content";
 export default function HeroSection() {
   const { t } = useLanguage();
   const c = content.hero;
+  const [imageError, setImageError] = useState(false);
 
   return (
     <section className="relative min-h-screen bg-white flex flex-col justify-end pt-20">
@@ -82,13 +84,16 @@ export default function HeroSection() {
             className="flex flex-col gap-6 lg:max-w-md"
           >
             <div className="relative w-40 h-40 md:w-52 md:h-52 lg:w-56 lg:h-56 flex-shrink-0 rounded-full overflow-hidden aspect-square self-start bg-secondary">
-              <img
-                src={PROFILE_IMAGE}
-                alt="Marco Mannschatz"
-                className="absolute inset-0 w-full h-full object-cover grayscale"
-                style={{ objectPosition: "50% 35%" }}
-                loading="eager"
-              />
+              {!imageError && (
+                <img
+                  src={PROFILE_IMAGE}
+                  alt="Marco Mannschatz"
+                  className="absolute inset-0 w-full h-full object-cover grayscale"
+                  style={{ objectPosition: "50% 35%" }}
+                  loading="eager"
+                  onError={() => setImageError(true)}
+                />
+              )}
             </div>
             <p className="text-base md:text-lg text-foreground/60 leading-relaxed">{t(c.intro.de, c.intro.en)}</p>
           </motion.div>
