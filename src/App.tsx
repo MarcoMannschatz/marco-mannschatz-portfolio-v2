@@ -1,9 +1,14 @@
+import { LanguageProvider } from "@/lib/language-context";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <h1 className="section-padding container text-4xl md:text-6xl">
-        Marco Mannschatz
-      </h1>
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        <HeroSection />
+      </div>
+    </LanguageProvider>
   );
 }
