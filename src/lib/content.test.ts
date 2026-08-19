@@ -12,10 +12,10 @@ describe("content", () => {
     expect(content.cv.experience).toHaveLength(5);
   });
 
-  it("enthält 5 Portfolio-Kategorien, Fubble hat 13 Kunden", () => {
+  it("enthält 5 Portfolio-Kategorien, Fubble hat 14 Kunden", () => {
     expect(content.portfolio.categories).toHaveLength(5);
     const fubble = content.portfolio.categories.find((c) => c.id === "fubble");
-    expect(fubble?.clients).toHaveLength(13);
+    expect(fubble?.clients).toHaveLength(14);
   });
 
   it("Kontakt-E-Mail stimmt mit der öffentlichen Adresse überein", () => {

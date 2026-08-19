@@ -391,6 +391,14 @@ My profile combines design expertise with a deep understanding of target audienc
               { type: "image" as const, url: "/images/portfolio/fubble/kohlpharma/01.svg", alt: "kohlpharma – Softwareentwickler (m/w/d)" },
             ],
           },
+          {
+            id: "bergischlaender",
+            name: "Bergischländer",
+            cover: "/images/portfolio/fubble/bergischlaender/logo.svg",
+            media: [
+              { type: "image" as const, url: "/images/portfolio/fubble/bergischlaender/01.svg", alt: "Bergischländer – Fleischfachverkäufer (m/w/d)" },
+            ],
+          },
         ],
       },
       {
