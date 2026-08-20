@@ -13,3 +13,7 @@ class MockIntersectionObserver implements IntersectionObserver {
 }
 
 globalThis.IntersectionObserver = MockIntersectionObserver;
+
+// jsdom kennt scrollIntoView nicht — ohne Mock werfen alle Klick-Handler,
+// die scrollen (Header-Navigation, PortfolioSection), einen TypeError.
+window.HTMLElement.prototype.scrollIntoView = function () {};
