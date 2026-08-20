@@ -1,14 +1,17 @@
+import { Route, Switch } from "wouter";
 import { LanguageProvider } from "@/lib/language-context";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
+import Home from "@/pages/Home";
+import Impressum from "@/pages/Impressum";
+import Datenschutz from "@/pages/Datenschutz";
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-        <HeroSection />
-      </div>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/impressum" component={Impressum} />
+        <Route path="/datenschutz" component={Datenschutz} />
+      </Switch>
     </LanguageProvider>
   );
 }
