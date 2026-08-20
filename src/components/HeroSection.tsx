@@ -16,7 +16,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-foreground/50 mb-4 md:mb-6"
+          className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground/50 mb-4"
         >
           {t(c.claim.de, c.claim.en)}
         </motion.p>

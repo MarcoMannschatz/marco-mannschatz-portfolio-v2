@@ -15,7 +15,7 @@ export default function Datenschutz() {
           </span>
         </Link>
 
-        <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[0.9] mb-12" style={{ fontFamily: "var(--font-display)" }}>
+        <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[0.9] mb-12 md:mb-16" style={{ fontFamily: "var(--font-display)" }}>
           {lang === "de" ? "Datenschutz" : "Privacy"}
         </h1>
 
