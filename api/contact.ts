@@ -54,7 +54,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       "api-key": apiKey,
     },
     body: JSON.stringify({
-      sender: { name: "marcomannschatz.de", email: "no-reply@marcomannschatz.de" },
+      sender: { name: "marcomannschatz.de", email: "hallo@marcomannschatz.de" },
       to: [{ email: "hallo@marcomannschatz.de", name: "Marco Mannschatz" }],
       replyTo: { email: payload.email, name: payload.name },
       subject: subjectLine,
