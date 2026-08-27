@@ -348,7 +348,7 @@ My profile combines design expertise with a deep understanding of target audienc
             name: "Hugendubel Digital",
             cover: "/images/portfolio/fubble/hugendubel-digital/logo.webp",
             media: [
-              { type: "image" as const, url: "/images/portfolio/fubble/hugendubel-digital/01.svg", alt: "Hugendubel Digital – Backend-IT-Entwickler (m/w/d)" },
+              { type: "image" as const, url: "/images/portfolio/fubble/hugendubel-digital/01.jpg", alt: "Hugendubel Digital – Backend-IT-Entwickler (m/w/d)" },
             ],
           },
           {
